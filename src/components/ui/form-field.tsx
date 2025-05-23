@@ -6,9 +6,9 @@ import {
 	FormField as ShadcnFormField,
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
+import type { ComponentProps, HTMLAttributes } from "react";
 import type { Control, FieldPath, FieldValues } from "react-hook-form";
 import { Input } from "./input";
-import type { ComponentProps, HTMLAttributes } from "react";
 
 export function FormField<T extends FieldValues>({
 	control,

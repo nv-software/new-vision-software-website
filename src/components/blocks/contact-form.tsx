@@ -2,19 +2,19 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import type { FC } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Button } from "../ui/button";
 import { Form } from "../ui/form";
 import { FormField } from "../ui/form-field";
-import { Button } from "../ui/button";
 
 const formSchema = z.object({
 	name: z.string().min(2, {
-		message: "O nome deve ter pelo menos 2 caracteres.",
+		message: "Mínimo 2 caracteres.",
 	}),
 	email: z.string().email({
 		message: "Insira um e-mail válido.",
 	}),
 	company: z.string().min(2, {
-		message: "O nome da empresa deve ter pelo menos 2 caracteres.",
+		message: "Mínimo 2 caracteres.",
 	}),
 	topic: z.string(),
 	message: z.string(),
