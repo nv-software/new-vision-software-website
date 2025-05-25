@@ -1,10 +1,16 @@
 ---
 import "@/styles/tailwind.css";
+import { Image } from "astro:assets";
+import backgroundImage from "@/assets/images/background.jpg";
+import BrandsSection from "@/components/sections/brands-section.astro";
 import ContactSection from "@/components/sections/contact-section.astro";
 import FaqSection from "@/components/sections/faq-section.astro";
+import FooterSection from "@/components/sections/footer-section.astro";
+import HeroSection from "@/components/sections/hero-section.astro";
+import NavbarSection from "@/components/sections/navbar-section.astro";
 ---
 
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,9 +19,30 @@ import FaqSection from "@/components/sections/faq-section.astro";
     <title>New Vision Software</title>
   </head>
   <body>
-    <div class="w-full container mx-auto p-4">
-      <FaqSection />
+    <div class="relative">
+      <div class="absolute z-[1] h-full w-full">
+        <Image
+          loading="eager"
+          alt="Neutral background"
+          draggable="false"
+          class="h-full w-full object-cover blur-[2px]"
+          src={backgroundImage}
+        />
+      </div>
+      <NavbarSection />
+      <HeroSection />
     </div>
     <ContactSection />
+    <div class="container px-6">
+      <!-- <FaqSection /> -->
+      <FooterSection />
+    </div>
+    <!-- <div class="container">
+      <BrandsSection />
+    </div> -->
+    <!-- <div class="w-full container mx-auto p-4">
+      <FaqSection />
+    </div>
+    <ContactSection /> -->
   </body>
 </html>

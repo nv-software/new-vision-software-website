@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import logoIcon from "@/assets/images/logo-icon.svg";
+import logo from "@/assets/images/logo.svg";
+import { Separator } from "@/components/ui/separator";
+---
+
+<div class="py-8 space-y-4">
+  <div class="flex justify-between">
+    <div class="space-y-1">
+      <div class="flex items-center gap-2">
+        <Image
+          draggable="false"
+          loading="eager"
+          height={35}
+          src={logoIcon}
+          alt="New Vision Software"
+        />
+        <Image
+          draggable="false"
+          loading="eager"
+          height={20}
+          class="invert"
+          src={logo}
+          alt="New Vision Software"
+        />
+      </div>
+      <p class="text-sm text-muted-foreground">
+        Mais que software. Parceria para evoluir.
+      </p>
+    </div>
+    <div class="space-y-2">
+      <p class="font-medium">Encontre o que precisa</p>
+      <nav class="flex flex-col space-y-2 text-sm text-muted-foreground">
+        <a href="#start">Inicio</a>
+        <a href="#solutions">Soluções</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </div>
+  <Separator />
+  <div class="text-sm text-muted-foreground flex items-center justify-between">
+    <p>© 2025 New Vision Software</p>
+    <div class="flex flex-row gap-2 items-center">
+      <a href="privacy-policy">Política de privacidade</a>
+      <Separator
+        className="data-[orientation=vertical]:h-[20px]"
+        orientation="vertical"
+      />
+      <a href="terms-of-service">Termos de serviço</a>
+    </div>
+  </div>
+</div>

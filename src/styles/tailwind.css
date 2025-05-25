@@ -12,16 +12,12 @@ p {
 	@apply leading-7;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-span,
-label,
-::placeholder {
+* {
 	@apply antialiased;
+}
+
+.container {
+	@apply max-w-[70rem] mx-auto w-full;
 }
 
 .stack {

@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import havaianasLogo from "@/assets/brands/havaianas.svg";
+import heringLogo from "@/assets/brands/hering.svg";
+import mizunoLogo from "@/assets/brands/mizuno.svg";
+import osklenLogo from "@/assets/brands/osklen.svg";
+import riachueloLogo from "@/assets/brands/riachuelo.svg";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+---
+
+<section
+  class="flex items-center relative justify-center py-32 flex-col text-white mx-auto container text-center space-y-4 z-[200]"
+>
+  <h1 class="text-5xl font-bold !leading-12 tracking-tight">
+    Software inteligente.<br /> Resultados concretos.
+  </h1>
+  <p class="max-w-[600px] text-center mx-auto">
+    Unimos inovação, performance e usabilidade para entregar soluções que
+    resolvem problemas reais.
+  </p>
+  <div>
+    <Button>Fale com a gente</Button>
+    <Button variant="link" className="text-white">
+      Conheça nossos serviços <ArrowRight />
+    </Button>
+  </div>
+  <div class="pt-16 space-y-4">
+    <div class="flex justify-between gap-4">
+      <Image
+        loading="eager"
+        draggable="false"
+        class="max-h-[30px] brightness-0 invert"
+        alt="Riachuelo"
+        src={riachueloLogo}
+      />
+      <Image
+        loading="eager"
+        draggable="false"
+        class="max-h-[30px] brightness-0 invert"
+        alt="Havaianas"
+        src={havaianasLogo}
+      />
+      <Image
+        loading="eager"
+        draggable="false"
+        class="max-h-[30px] brightness-0 invert"
+        alt="Mizuno"
+        src={mizunoLogo}
+      />
+      <Image
+        loading="eager"
+        draggable="false"
+        class="max-h-[30px] brightness-0 invert"
+        alt="Hering"
+        src={heringLogo}
+      />
+      <Image
+        loading="eager"
+        draggable="false"
+        class="max-h-[30px] brightness-0 invert"
+        alt="Osklen"
+        src={osklenLogo}
+      />
+    </div>
+  </div>
+</section>

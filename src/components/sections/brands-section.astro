@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import havaianasLogo from "@/assets/brands/havaianas.svg";
+import heringLogo from "@/assets/brands/hering.svg";
+import mizunoLogo from "@/assets/brands/mizuno.svg";
+import osklenLogo from "@/assets/brands/osklen.svg";
+import riachueloLogo from "@/assets/brands/riachuelo.svg";
+---
+
+<div class="py-12 px-4 space-y-4">
+  <div class="flex justify-between gap-4">
+    <Image
+      loading="eager"
+      draggable="false"
+      class="max-h-[30px]"
+      alt="Riachuelo"
+      src={riachueloLogo}
+    />
+    <Image
+      draggable="false"
+      class="max-h-[30px]"
+      alt="Havaianas"
+      src={havaianasLogo}
+      loading="eager"
+    />
+    <Image
+      draggable="false"
+      class="max-h-[30px]"
+      alt="Mizuno"
+      src={mizunoLogo}
+      loading="eager"
+    />
+    <Image
+      draggable="false"
+      class="max-h-[30px]"
+      alt="Hering"
+      src={heringLogo}
+      loading="eager"
+    />
+    <Image
+      draggable="false"
+      class="max-h-[30px]"
+      alt="Osklen"
+      src={osklenLogo}
+      loading="eager"
+    />
+  </div>
+  <p
+    class="text-center max-w-[800px] text-lg pt-4 tracking-wide text-foreground font-medium mx-auto"
+  >
+    Cada marca aqui representa um desafio vencido e uma solução entregue.
+  </p>
+</div>
