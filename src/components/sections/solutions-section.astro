@@ -1,21 +1,66 @@
 ---
-import { cn } from "@/lib/utils";
-import { Workflow } from "@lucide/astro";
-import { Integration } from "../blocks/integration";
-import { GridPattern } from "../magicui/grid-pattern";
+import {
+  BrainCircuit,
+  LifeBuoy,
+  ServerCog,
+  Webhook,
+  type AstroComponent,
+} from "@lucide/astro";
+
+const about_us: Record<string, { text: string; icon: AstroComponent }> = {
+  "Desenvolvimento Web e Mobile": {
+    text: "Soluções rápidas, seguras e sob medida para seu negócio.",
+    icon: ServerCog,
+  },
+  "Integrações e APIs": {
+    text: "Conecte sistemas e otimize seus processos com integração de APIs.",
+    icon: Webhook,
+  },
+  "IA e Automação": {
+    text: "Automatize seu atendimento e processos com ChatBots e Inteligência Artificial.",
+    icon: BrainCircuit,
+  },
+  "Consultoria e Suporte": {
+    text: "Consultoria estratégica para transformar seu projeto digital.",
+    icon: LifeBuoy,
+  },
+};
 ---
 
-<div class="container py-8 space-y-8">
-  <div class="text-center space-y-2">
-    <h3
-      class="antialiased text-5xl text-center mx-auto font-medium text-foreground"
+<div class="container py-8 text-center space-y-6">
+  <div>
+    <div
+      class="select-none px-2 py-1 border rounded-md mb-3 bg-[#f2eee6] relative text-xs w-max font-semibold tracking-normal mx-auto"
     >
-      Tecnologia sólida, resultados reais
-    </h3>
-    <p class="text-xl text-muted-foreground">
-      Seu projeto em boas mãos: tecnologia feita para funcionar, evoluir e
-      durar.
-    </p>
+      Sobre nós
+    </div>
+    <div class="space-y-2">
+      <h2 class="scroll-m-20 text-3xl font-semibold !tracking-tight first:mt-0">
+        Tecnologia, estratégia e design em soluções digitais completas.
+      </h2>
+      <p>
+        Somos uma equipe especializada em desenvolvimento web e mobile,
+        automações com IA, integrações de sistemas e design centrado no usuário.
+        Ajudamos empresas de todos os portes a digitalizar processos, otimizar
+        operações e conquistar presença digital com eficiência e inteligência.
+      </p>
+    </div>
   </div>
-  <div class="grid grid-cols-3 grid-rows-1 gap-4"></div>
+  <div class="grid grid-cols-4 grid-rows-1 gap-8">
+    {
+      Object.keys(about_us).map((item) => {
+        const Icon = about_us[item].icon;
+
+        return (
+          <div class="hover:shadow-md transition-all duration-300 select-none border p-4 rounded-lg text-left">
+            <div class="mb-2 bg-muted-foreground/20 text-foreground p-2 flex items-center justify-center rounded-md w-max">
+              <Icon />
+            </div>
+            <p class="!leading-6 font-medium">{item}</p>
+            <p class="text-sm !leading-6">{about_us[item].text}</p>
+          </div>
+        );
+      })
+    }
+  </div>
 </div>
