@@ -38,6 +38,11 @@ const steps: Record<string, string[]> = {
 
 <div class="bg-[#fafafa]">
   <div class="container py-8">
+    <div
+      class="select-none px-2 py-1 border rounded-md mb-3 bg-[#f2eee6] relative text-xs w-max font-semibold tracking-normal mx-auto"
+    >
+      Como trabalhamos
+    </div>
     <div class="text-center mb-2">
       <h2 class="scroll-m-20 text-3xl font-semibold !tracking-tight first:mt-0">
         Nosso processo, guiado por inovação e agilidade
@@ -53,7 +58,7 @@ const steps: Record<string, string[]> = {
       {
         Object.keys(steps).map((item) => (
           <div class="bg-white border hover:shadow-md transition-all duration-300 p-4 rounded-lg">
-            <p class="!leading-7">{item}</p>
+            <p class="!leading-7 font-medium">{item}</p>
             <div>
               {steps[item].map((value) => (
                 <div class="flex items-center gap-2 text-sm">
