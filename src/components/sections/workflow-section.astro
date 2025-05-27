@@ -36,34 +36,36 @@ const steps: Record<string, string[]> = {
 };
 ---
 
-<div class="container py-8">
-  <div class="text-center mb-2">
-    <h2 class="scroll-m-20 text-3xl font-semibold !tracking-tight first:mt-0">
-      Nosso processo, guiado por inovação e agilidade
-    </h2>
-    <p class="!leading-7">
-      Do primeiro contato à entrega final, seguimos um fluxo eficiente que
-      prioriza tempo, resultado e confiança em cada etapa.
-    </p>
-  </div>
-  <OurWorkflow client:idle />
-  <div class="select-none grid grid-cols-3 grid-rows-[1fr] gap-4">
-    <!-- CARDS -->
-    {
-      Object.keys(steps).map((item) => (
-        <div class="border hover:shadow-md transition-all duration-300 p-4 rounded-lg">
-          <p class="!leading-7">{item}</p>
-          <div>
-            {steps[item].map((value) => (
-              <div class="flex items-center gap-2 text-sm">
-                <Check class="shrink-0 self-start mt-2" size="16" />
-                <p class="!leading-7">{value}</p>
-              </div>
-            ))}
+<div class="bg-[#fafafa]">
+  <div class="container py-8">
+    <div class="text-center mb-2">
+      <h2 class="scroll-m-20 text-3xl font-semibold !tracking-tight first:mt-0">
+        Nosso processo, guiado por inovação e agilidade
+      </h2>
+      <p class="!leading-7">
+        Do primeiro contato à entrega final, seguimos um fluxo eficiente que
+        prioriza tempo, resultado e confiança em cada etapa.
+      </p>
+    </div>
+    <OurWorkflow client:idle />
+    <div class="select-none grid grid-cols-3 grid-rows-[1fr] gap-4">
+      <!-- CARDS -->
+      {
+        Object.keys(steps).map((item) => (
+          <div class="bg-white border hover:shadow-md transition-all duration-300 p-4 rounded-lg">
+            <p class="!leading-7">{item}</p>
+            <div>
+              {steps[item].map((value) => (
+                <div class="flex items-center gap-2 text-sm">
+                  <Check class="shrink-0 self-start mt-2" size="16" />
+                  <p class="!leading-7">{value}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))
-    }
-    <!-- CARDS -->
+        ))
+      }
+      <!-- CARDS -->
+    </div>
   </div>
 </div>
