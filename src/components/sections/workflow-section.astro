@@ -1,0 +1,71 @@
+---
+import { Check } from "@lucide/astro";
+import { OurWorkflow } from "../blocks/our-workflow";
+
+const steps: Record<string, string[]> = {
+  Prospecção: [
+    "Identificação das necessidades e objetivos do cliente.",
+    "Reunião inicial para entendimento estratégico.",
+    "Coleta de dados e informações-chave.",
+  ],
+  Proposta: [
+    "Definição de escopo, prazos e investimento.",
+    "Elaboração de proposta personalizada.",
+    "Alinhamento final para aprovação do projeto.",
+  ],
+  Discovery: [
+    "Levantamento de requisitos técnicos e funcionais.",
+    "Validação de hipóteses e mapeamento de soluções.",
+    "Planejamento das fases de execução.",
+  ],
+  Execução: [
+    "Desenvolvimento com entregas ágeis e iterativas.",
+    "Testes constantes e revisão em tempo real.",
+    "Comunicação próxima com o cliente durante todo o processo.",
+  ],
+  Entrega: [
+    "Apresentação do produto final validado.",
+    "Documentação técnica e instruções de uso.",
+    "Publicação, deploy ou entrega técnica concluída.",
+  ],
+  Suporte: [
+    "Atendimento pós-lançamento para ajustes.",
+    "Monitoramento técnico e evolução contínua.",
+    "Canal aberto para suporte e melhorias.",
+  ],
+};
+---
+
+<div class="container py-8">
+  <div class="text-center mb-2">
+    <h2 class="scroll-m-20 text-3xl font-semibold !tracking-tight first:mt-0">
+      Nosso processo, guiado por inovação e agilidade
+    </h2>
+    <p class="!leading-7">
+      Do primeiro contato à entrega final, seguimos um fluxo eficiente que
+      prioriza tempo, resultado e confiança em cada etapa.
+    </p>
+  </div>
+  <OurWorkflow client:idle />
+  <div
+    class="select-none grid grid-cols-[1fr_1fr_1fr] grid-rows-[1fr_1fr_1fr] gap-4"
+  >
+    <!-- CARDS -->
+    {
+      Object.keys(steps).map((item) => (
+        <div class="border hover:shadow-md transition-all duration-300 p-4 rounded-lg">
+          <p class="!leading-7">{item}</p>
+          <div>
+            {steps[item].map((value) => (
+              <div class="flex items-center gap-2 text-sm">
+                <Check class="shrink-0 self-start mt-2" size="16" />
+                <p class="!leading-7">{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+    <!-- CARDS -->
+  </div>
+</div>

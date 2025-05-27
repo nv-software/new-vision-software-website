@@ -5,19 +5,25 @@ import { Button } from "@/components/ui/button";
 ---
 
 <section
-  class="h-[80px] relative flex items-center justify-center w-full container px-4 z-[100]"
+  class="h-[80px] relative flex items-center justify-center container px-4 z-[100]"
 >
   <Image
     loading="eager"
-    class="absolute left-0 w-[180px] px-4"
+    class="absolute left-0 w-[180px] px-4 invert"
     src={logo}
     alt="New Vision Software"
     draggable="false"
   />
-  <nav class="text-white hidden lg:flex font-medium gap-4 mx-auto">
-    <a href="#solutions">Soluções</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#faq">FAQ</a>
+  <nav class="hidden lg:flex font-medium gap-2 mx-auto">
+    <a href="#solutions">
+      <Button size="sm" variant="ghost">Soluções</Button>
+    </a>
+    <a href="#portfolio">
+      <Button size="sm" variant="ghost">Portfólio</Button>
+    </a>
+    <a href="#faq">
+      <Button size="sm" variant="ghost">FAQ</Button>
+    </a>
   </nav>
   <div class="absolute right-0 px-4">
     <Button>Explore nossas soluções</Button>

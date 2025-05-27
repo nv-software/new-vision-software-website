@@ -2,12 +2,19 @@
 import "@/styles/tailwind.css";
 import { Image } from "astro:assets";
 import backgroundImage from "@/assets/images/background.jpg";
+import { DotPattern } from "@/components/magicui/dot-pattern";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { GridPattern } from "@/components/magicui/grid-pattern";
 import BrandsSection from "@/components/sections/brands-section.astro";
 import ContactSection from "@/components/sections/contact-section.astro";
 import FaqSection from "@/components/sections/faq-section.astro";
 import FooterSection from "@/components/sections/footer-section.astro";
 import HeroSection from "@/components/sections/hero-section.astro";
 import NavbarSection from "@/components/sections/navbar-section.astro";
+import SolutionsSection from "@/components/sections/solutions-section.astro";
+import TechSection from "@/components/sections/tech-section.astro";
+import { cn } from "@/lib/utils";
+import WorkflowSection from "@/components/sections/workflow-section.astro";
 ---
 
 <html lang="pt-br">
@@ -21,18 +28,27 @@ import NavbarSection from "@/components/sections/navbar-section.astro";
   <body>
     <div class="relative">
       <div class="absolute z-[1] h-full w-full">
-        <Image
+        <!-- <Image
           loading="eager"
           alt="Neutral background"
           draggable="false"
           class="h-full w-full object-cover blur-[2px]"
           src={backgroundImage}
+        /> -->
+        <GridPattern
+          className={cn(
+            "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+          )}
         />
       </div>
       <NavbarSection />
       <HeroSection />
     </div>
-    <ContactSection />
+    <BrandsSection />
+    <WorkflowSection />
+    <!-- <SolutionsSection /> -->
+    <!-- <TechSection /> -->
+    <!-- <ContactSection /> -->
     <div class="container px-6">
       <!-- <FaqSection /> -->
       <FooterSection />

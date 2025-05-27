@@ -1,0 +1,82 @@
+---
+const items = [
+	"React.js",
+	"Next.js",
+	"Vue.js",
+	"Node.js",
+	"Express",
+	"TypeScript",
+	"Python",
+	"AWS",
+	"GCP",
+	"Hetzner",
+	"Docker",
+	"Kubernetes",
+	"GitHub Actions",
+];
+---
+
+<div class="bg-[#ffddb7]/10 py-12">
+  <div class="container">
+    <div class="relative overflow-hidden py-4 space-y-4">
+      <div class="flex animate-marquee whitespace-nowrap">
+        {
+          new Array(2).fill(null).map(() => (
+            <div class="flex gap-8 mr-8">
+              {items.map((item) => (
+                <span class="text-muted-foregound text-xl font-medium">
+                  {item}
+                </span>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+      <div class="flex animate-marquee-reverse whitespace-nowrap">
+        {
+          new Array(2).fill(null).map(() => (
+            <div class="flex gap-8 mr-8">
+              {items.map((item) => (
+                <span class="text-muted-foregound text-xl font-medium">
+                  {item}
+                </span>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+      <div class="flex animate-marquee whitespace-nowrap">
+        {
+          new Array(2).fill(null).map(() => (
+            <div class="flex gap-8 mr-8">
+              {items.map((item) => (
+                <span class="text-muted-foregound text-xl font-medium">
+                  {item}
+                </span>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 15s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee 15s linear infinite;
+    animation-duration: reverse;
+  }
+</style>

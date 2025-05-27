@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 ---
 
 <section
-  class="flex items-center relative justify-center py-32 flex-col text-white mx-auto container text-center space-y-4 z-[200]"
+  class="flex items-center relative justify-center py-32 flex-col mx-auto container text-center space-y-4 z-[200]"
 >
   <h1 class="text-5xl font-bold !leading-12 tracking-tight">
     Software inteligente.<br /> Resultados concretos.
@@ -21,47 +21,52 @@ import { ArrowRight } from "lucide-react";
   </p>
   <div>
     <Button>Fale com a gente</Button>
-    <Button variant="link" className="text-white">
-      Conheça nossos serviços <ArrowRight />
+    <Button
+      className="hover:[&_svg]:translate-x-[4px] [&_svg]:transition-all"
+      variant="ghost"
+    >
+      <div class="flex items-center gap-1">
+        Conheça nossos serviços <ArrowRight className="mt-[1px]" />
+      </div>
     </Button>
   </div>
-  <div class="pt-16 space-y-4">
+  <!-- <div class="pt-16 space-y-4">
     <div class="flex justify-between gap-4">
       <Image
         loading="eager"
         draggable="false"
-        class="max-h-[30px] brightness-0 invert"
+        class="max-h-[30px] brightness-0"
         alt="Riachuelo"
         src={riachueloLogo}
       />
       <Image
         loading="eager"
         draggable="false"
-        class="max-h-[30px] brightness-0 invert"
+        class="max-h-[30px] brightness-0"
         alt="Havaianas"
         src={havaianasLogo}
       />
       <Image
         loading="eager"
         draggable="false"
-        class="max-h-[30px] brightness-0 invert"
+        class="max-h-[30px] brightness-0"
         alt="Mizuno"
         src={mizunoLogo}
       />
       <Image
         loading="eager"
         draggable="false"
-        class="max-h-[30px] brightness-0 invert"
+        class="max-h-[30px] brightness-0"
         alt="Hering"
         src={heringLogo}
       />
       <Image
         loading="eager"
         draggable="false"
-        class="max-h-[30px] brightness-0 invert"
+        class="max-h-[30px] brightness-0"
         alt="Osklen"
         src={osklenLogo}
       />
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 </section>
